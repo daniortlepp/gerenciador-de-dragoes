@@ -1,0 +1,9 @@
+﻿
+<div class="navbar" *ngIf="currentUser">
+    <a class="active" routerLink="/" routerLinkActive="active">Dragões</a>
+    <a (click)="logout()">Logout</a>
+  </div>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

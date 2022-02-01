@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+a { cursor: pointer; color: #015677 }
+
+body {
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.navbar {
+	background-color: #333333;
+	overflow: hidden;
+	a {
+		float: left;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+		&:hover {
+			background-color: #ddd;
+			color: black;
+		}
+	}
+	a.active {
+		background-color: #04AA6D;
+		color: white;
+	}
+}
+
+.container {
+	max-width: 90%;
+	margin-left: 5%;
+	margin-top: 50px;
+	table {
+		width: 100%;
+		tbody {
+			border-collapse: collapse;
+			width: 100%;
+			td {
+				border: 1px solid #ddd;
+				padding: 8px;
+			}
+			th {
+				border: 1px solid #ddd;
+				padding: 8px;
+				padding-top: 12px;
+				padding-bottom: 12px;
+				text-align: left;
+				background-color: #04AA6D;
+				color: white;
+			}
+			tr {
+				&:nth-child(even) {
+					background-color: #f2f2f2;
+				}
+				&:hover {
+					background-color: #ddd;
+				}
+                th:nth-child(1) {
+					width: 80%;
+				}
+                th:nth-child(2) {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+.btn {
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn.btn-success {
+    background-color: #04AA6D;
+}
+
+.btn.btn-default {
+    background-color: #333;
+}
+
+.btn.btn-danger {
+    background-color: #ac0505;
+}
+
+.form-group {
+    width: 100%;
+    line-height: 40px;
+    display: block;
+
+    label {
+        width: 70px;
+        display: inline-block;
+    }
+
+    input.form-control {
+        width: 50%;
+        line-height: 24px;
+        border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+        border: 1px solid #04AA6D;
+        margin: 0 15px 0 70px; 
+    }
+}
+
+.message-error {
+    border: 1px solid #ac0505;
+    background: #f5b6b6;
+    color: #ac0505;
+    width: 50%;
+    padding: 10px;
+    margin: 15px 0 0 70px;
+}
+
+.login-form {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+
+    h2 {
+        max-width: 200px;
+        margin: 0;
+    }
+
+    .login-body {
+        width: auto;
+
+        form {
+            .form-group {
+                input.form-control {
+                    width: 80%;
+                    max-width: 520px !important;
+                }
+
+                .invalid-feedback {
+                    color: #ac0505;
+                    margin-left: 70px;
+                }
+            }
+        }
+    }
+
+    .btn-default {
+        border: 1px solid #333;
+        margin: 10px 0 0 70px;
+    }
+}
+
+form .form-group .invalid-feedback {
+    color: #ac0505;
+    margin-left: 70px;
+}
+
+@media all and (max-width: 800px) {
+
+    .btn.btn-new {
+        padding: 0;
+    }
+
+}

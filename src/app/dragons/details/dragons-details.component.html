@@ -1,0 +1,16 @@
+<h1>Detalhes do Dragão</h1>
+
+<div class="well">
+    <p>Data de Criação: {{dragon.createdAt | date: 'dd/MM/yyyy'}}</p>
+    <p>Nome: {{dragon.name}}</p>
+    <p>Tipo: {{dragon.type}}</p>
+    
+    <div class="form-group text-center">
+      <a [routerLink]="['/dragons/list']"
+        class="btn btn-default">
+        <span class="glyphicon glyphicon-chevron-left" 
+          aria-hidden="true"></span> Voltar
+      </a>
+    </div>
+
+</div>

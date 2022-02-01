@@ -1,0 +1,27 @@
+<h1><span *ngIf="!id">Cadastrar novo</span><span *ngIf="id">Editar</span> Dragão</h1>
+
+<div class="form">
+  <form [formGroup]="dragonForm">
+    <div class="form-group">
+      <label for="name">Nome:</label>
+      <input type="text" class="form-control" id="name" name="name" formControlName="name" required> 
+      <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+        <div *ngIf="f.name.errors.required">Nome é obrigatório</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="type">Tipo:</label>
+      <input type="text" class="form-control" id="type" name="type" formControlName="type" required>
+      <div *ngIf="submitted && f.type.errors" class="invalid-feedback">
+        <div *ngIf="f.type.errors.required">Tipo é obrigatório</div>
+      </div>
+    </div>
+
+    <div class="form-group text-center">
+      <input type="submit" class="btn btn-success" (click)="save(); $event.preventDefault()" value="Salvar">
+      <a [routerLink]="['/dragons/list']" class="btn btn-default">Voltar</a>
+    </div>
+
+  </form>
+</div>
